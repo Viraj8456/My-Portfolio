@@ -3,120 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viraj Sherlekar | Technical Portfolio</title>
+    <title>Viraj Sherlekar | Systems & Logic</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); }
+        body { background-color: #0b0f1a; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     </style>
 </head>
-<body class="p-4 md:p-8">
+<body class="p-6 md:p-12">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
-        <header class="mb-12 border-b border-slate-700 pb-8">
-            <h1 class="text-4xl font-bold text-blue-400">Viraj Sherlekar</h1>
-            <p class="text-slate-400 mt-2 text-lg">Aspiring Developer | Physics Graduate | Systems Tester</p>
-            <div class="flex gap-4 mt-4">
-                <span class="bg-blue-900/50 text-blue-200 px-3 py-1 rounded-full text-sm border border-blue-700">HTML5</span>
-                <span class="bg-blue-900/50 text-blue-200 px-3 py-1 rounded-full text-sm border border-blue-700">JavaScript (ES6)</span>
-                <span class="bg-blue-900/50 text-blue-200 px-3 py-1 rounded-full text-sm border border-blue-700">Tailwind CSS</span>
+        <header class="mb-16">
+            <h1 class="text-4xl font-bold tracking-tight text-white">Viraj Sherlekar</h1>
+            <p class="text-slate-500 mt-2 text-lg font-medium">B.Sc. Physics | Systems Testing | Web Development</p>
+            <div class="flex gap-3 mt-6">
+                <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs font-mono border border-slate-700">JS_ES6</span>
+                <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs font-mono border border-slate-700">AWS_INFRA</span>
+                <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs font-mono border border-slate-700">SYSTEM_LOGS</span>
             </div>
         </header>
 
         <!-- Project 1: Physics Engine -->
-        <section class="mb-12">
-            <div class="flex items-center gap-2 mb-4">
-                <div class="w-2 h-8 bg-blue-500 rounded-full"></div>
-                <h2 class="text-2xl font-semibold">Project 01: Physics Logic Engine</h2>
-            </div>
-            <div class="glass p-6 rounded-2xl border border-slate-700">
-                <p class="text-slate-400 mb-6">A utility that translates physical laws into executable JavaScript logic. Demonstrates DOM manipulation and mathematical precision.</p>
+        <section class="mb-16">
+            <h2 class="text-xl font-bold mb-6 text-slate-200 uppercase tracking-widest text-sm">01 / Physics Logic Implementation</h2>
+            <div class="glass p-8 rounded-lg border border-slate-800">
+                <p class="text-slate-400 mb-8 leading-relaxed">Translating physical constants into functional code. This project handles user input and executes a kinetic energy calculation in the browser runtime.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-4">
-                        <label class="block text-sm font-medium text-slate-300">Mass (kg)</label>
-                        <input type="number" id="mass" value="1" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none">
-                        
-                        <label class="block text-sm font-medium text-slate-300">Velocity (m/s)</label>
-                        <input type="number" id="velocity" value="10" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none">
-                        
-                        <button onclick="calculatePhysics()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg transition">Execute Calculation</button>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Mass (kg)</label>
+                            <input type="number" id="mass" value="1" class="w-full bg-slate-900 border border-slate-700 rounded p-3 focus:border-blue-500 outline-none text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Velocity (m/s)</label>
+                            <input type="number" id="velocity" value="10" class="w-full bg-slate-900 border border-slate-700 rounded p-3 focus:border-blue-500 outline-none text-white">
+                        </div>
+                        <button onclick="calculatePhysics()" class="w-full bg-slate-200 hover:bg-white text-slate-900 font-bold py-3 px-4 rounded transition">RUN CALCULATION</button>
                     </div>
                     
-                    <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700 flex flex-col justify-center">
-                        <div class="text-sm text-slate-500 uppercase tracking-widest mb-2">Kinetic Energy (Joules)</div>
-                        <div id="physicsResult" class="text-4xl font-mono text-green-400">50.00 J</div>
-                        <div class="text-xs text-slate-500 mt-4 font-mono">Formula: ½mv²</div>
+                    <div class="bg-black/40 p-6 rounded border border-slate-800 flex flex-col justify-center items-center">
+                        <div class="text-[10px] text-slate-600 font-mono uppercase mb-2">Output: Kinetic Energy</div>
+                        <div id="physicsResult" class="text-5xl font-mono text-white">50.00 J</div>
+                        <div class="text-[10px] text-slate-600 mt-6 font-mono">VAL: 0.5 * m * v²</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Project 2: Bug Report Generator -->
-        <section class="mb-12">
-            <div class="flex items-center gap-2 mb-4">
-                <div class="w-2 h-8 bg-purple-500 rounded-full"></div>
-                <h2 class="text-2xl font-semibold">Project 02: Dev-Ready Bug Report Tool</h2>
-            </div>
-            <div class="glass p-6 rounded-2xl border border-slate-700">
-                <p class="text-slate-400 mb-6">Inspired by my experience in Custom ROM testing. This tool automates the creation of standardized Markdown reports for developers.</p>
+        <section class="mb-16">
+            <h2 class="text-xl font-bold mb-6 text-slate-200 uppercase tracking-widest text-sm">02 / Standardized Bug Documentation</h2>
+            <div class="glass p-8 rounded-lg border border-slate-800">
+                <p class="text-slate-400 mb-8 leading-relaxed">A utility for generating structured Markdown reports. Built to standardize the bug reporting process found in open-source mobile development.</p>
                 
-                <div class="space-y-4">
-                    <input type="text" id="bugTitle" placeholder="Issue Title (e.g., SystemUI Crash)" class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2 outline-none">
-                    <textarea id="bugSteps" placeholder="Steps to reproduce..." class="w-full bg-slate-800 border border-slate-600 rounded-lg p-2 h-24 outline-none"></textarea>
+                <div class="space-y-5">
+                    <input type="text" id="bugTitle" placeholder="Bug Identifier (e.g. Kernel Panic @ Boot)" class="w-full bg-slate-900 border border-slate-700 rounded p-3 outline-none text-white">
+                    <textarea id="bugSteps" placeholder="Reproduction steps..." class="w-full bg-slate-900 border border-slate-700 rounded p-3 h-32 outline-none text-white"></textarea>
                     
                     <div class="flex gap-4">
-                        <select id="bugSeverity" class="bg-slate-800 border border-slate-600 rounded-lg p-2 outline-none">
-                            <option>Low</option>
-                            <option>Medium</option>
-                            <option>High</option>
+                        <select id="bugSeverity" class="bg-slate-900 border border-slate-700 rounded p-3 outline-none text-white text-sm">
+                            <option>Minor</option>
+                            <option>Moderate</option>
+                            <option>Major</option>
                             <option>Critical</option>
                         </select>
-                        <button onclick="generateReport()" class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg transition">Generate Markdown</button>
+                        <button onclick="generateReport()" class="flex-1 bg-slate-200 hover:bg-white text-slate-900 font-bold py-3 px-4 rounded transition">GENERATE LOG</button>
                     </div>
 
-                    <div id="reportOutputContainer" class="hidden mt-6">
-                        <pre id="reportOutput" class="bg-slate-900 p-4 rounded-lg border border-slate-700 text-sm text-purple-300 overflow-x-auto whitespace-pre-wrap"></pre>
-                        <button onclick="copyReport()" class="mt-2 text-xs text-slate-400 hover:text-white underline">Copy to Clipboard</button>
+                    <div id="reportOutputContainer" class="hidden mt-8">
+                        <pre id="reportOutput" class="bg-black/60 p-5 rounded border border-slate-800 text-xs text-slate-300 overflow-x-auto font-mono leading-relaxed"></pre>
+                        <button onclick="copyReport()" class="mt-3 text-[10px] text-slate-500 hover:text-slate-300 font-mono uppercase tracking-tighter">Copy to clipboard</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="text-center text-slate-500 text-sm py-8">
-            <p>Built with Passion in mind. | Viraj Sherlekar 2024</p>
+        <footer class="text-center text-slate-600 text-[10px] font-mono py-12 uppercase tracking-widest">
+            <p>Built with Logic & Systems | Viraj Sherlekar | 2024</p>
         </footer>
     </div>
 
     <script>
-        // Project 1 Logic: Physics Calculation
         function calculatePhysics() {
             const m = parseFloat(document.getElementById('mass').value);
             const v = parseFloat(document.getElementById('velocity').value);
-            
-            if (isNaN(m) || isNaN(v)) {
-                document.getElementById('physicsResult').innerText = "ERROR";
-                return;
-            }
-
-            // Formula: KE = 0.5 * m * v^2
+            if (isNaN(m) || isNaN(v)) return;
             const result = 0.5 * m * Math.pow(v, 2);
             document.getElementById('physicsResult').innerText = result.toFixed(2) + " J";
         }
 
-        // Project 2 Logic: Bug Report Formatting
         function generateReport() {
-            const title = document.getElementById('bugTitle').value || "No Title";
-            const steps = document.getElementById('bugSteps').value || "No steps provided.";
+            const title = document.getElementById('bugTitle').value || "Unnamed_Bug";
+            const steps = document.getElementById('bugSteps').value || "No steps documented.";
             const severity = document.getElementById('bugSeverity').value;
-            const date = new Date().toLocaleDateString();
+            const date = new Date().toISOString().split('T')[0];
 
-            const report = `### BUG REPORT: ${title}\n` +
-                         `**Date:** ${date}\n` +
-                         `**Severity:** ${severity}\n\n` +
-                         `#### Steps to Reproduce:\n${steps}\n\n` +
-                         `#### Expected Result:\nSystem stability maintained.\n\n` +
-                         `#### Actual Result:\nFailure observed. Log analysis recommended.`;
+            const report = `### LOG_${title}\n` +
+                         `STAMP: ${date}\n` +
+                         `PRIORITY: ${severity}\n\n` +
+                         `#### REPRO_STEPS:\n${steps}\n\n` +
+                         `#### STATUS:\nPending Investigation.`;
 
             document.getElementById('reportOutput').innerText = report;
             document.getElementById('reportOutputContainer').classList.remove('hidden');
@@ -130,7 +117,6 @@
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
-            alert('Markdown copied to clipboard!');
         }
     </script>
 </body>
